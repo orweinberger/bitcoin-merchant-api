@@ -1,0 +1,21 @@
+{
+  "name": "bitcoin-webpos",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bitcoin": "^2.3.0",
+    "body-parser": "~1.12.0",
+    "cookie-parser": "~1.3.4",
+    "debug": "~2.1.1",
+    "express": "~4.12.2",
+    "jade": "~1.9.2",
+    "js-yaml": "^3.2.7",
+    "leveldown": "^0.10.4",
+    "levelup": "^0.19.0",
+    "morgan": "~1.5.1",
+    "serve-favicon": "~2.2.0"
+  }
+}
