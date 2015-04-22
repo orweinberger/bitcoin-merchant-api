@@ -10,8 +10,8 @@ var users = require('./routes/users');
 
 var app = express();
 
-yaml = require('js-yaml');
-fs = require('fs');
+var yaml = require('js-yaml');
+var fs = require('fs');
 var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

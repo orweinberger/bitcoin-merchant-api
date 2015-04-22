@@ -3,3 +3,4 @@ node_modules/*
 .idea
 .idea/*
 config/default.yml
+db/*
