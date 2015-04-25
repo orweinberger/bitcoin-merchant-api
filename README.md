@@ -22,6 +22,16 @@ Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alter
     password: 12345678
     coldwallet: msi6NhVGpB3B83y4nfkHpjokeqwuNEotKq
   ```
+  
+  Note: By default the price provider is bitcoinaverage.com. You can specify a provider like this:
+  
+  ```
+  pricing:
+    provider: coinbase
+  ```
+  
+  Currently supported: coinbase, coindesk and bitpay.
+  
 
 3. Run `npm install`
 4. Start the server `npm start`
