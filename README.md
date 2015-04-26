@@ -88,6 +88,10 @@ Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alter
 
 See issues for todo list.
 
+###LICENSE
+
+MIT
+
 ### Buy me a beer
 
 ![12idKQBikRgRuZEbtxXQ4WFYB7Wa3hZzhT](http://i.imgur.com/HHQkm9t.png)

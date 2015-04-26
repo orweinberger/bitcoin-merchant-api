@@ -1,5 +1,7 @@
 {
   "name": "bitcoin-webpos",
+  "description": "A self hosted Bitcoin merchant API",
+  "license": "MIT",
   "version": "0.0.1",
   "private": false,
   "scripts": {
