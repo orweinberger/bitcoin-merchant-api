@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/orweinberger/bitcoin-webpos.svg?branch=master)](https://travis-ci.org/orweinberger/bitcoin-webpos)
+[![Coverage Status](https://coveralls.io/repos/orweinberger/bitcoin-webpos/badge.svg)](https://coveralls.io/r/orweinberger/bitcoin-webpos)
+
 #Bitcoin web point of sale
 
 **This project is experimental, please do not run in production or outside of TESTNET for now**
@@ -21,16 +24,18 @@ Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alter
     username: bitcoinrpc
     password: 12345678
     coldwallet: msi6NhVGpB3B83y4nfkHpjokeqwuNEotKq
+  pricing:
+    provider: bitpay
   ```
   
-  Note: By default the price provider is bitcoinaverage.com. You can specify a provider like this:
+  Note: If a pricing provider was not defined, BitcoinAverage will be used as default. Here's how you can define a different price provider:
   
   ```
   pricing:
     provider: coinbase
   ```
   
-  Currently supported: coinbase, coindesk, bitpay, bitstamp and btc-e.
+  Currently supported: `coinbase`, `coindesk`, `bitpay`, `bitstamp` and `btc-e`.
   
 
 3. Run `npm install`
