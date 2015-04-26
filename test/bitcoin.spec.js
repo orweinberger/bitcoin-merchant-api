@@ -6,7 +6,7 @@ var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
 
 describe("lib/bitcoin", function () {
   before(function (done) {
-    bitcoin.init(config.bitcoin, function (err) {
+    bitcoin.init(config, function (err) {
       if (err) return done(err);
       return done();
     });
@@ -16,7 +16,8 @@ describe("lib/bitcoin", function () {
       if (err) return done(err);
       assert.equal(100, result.amount);
       assert.equal('USD', result.currency);
-      done();
+      //console.log(result);
+      return done();
     });
   });
 });
