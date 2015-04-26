@@ -5,6 +5,7 @@ var assert = require('assert');
 var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
 
 describe("lib/bitcoin", function () {
+  var paymentAddress;
   before(function (done) {
     if (process.env.BITCOIN_RPC_USERNAME)
       config.bitcoin.username = process.env.BITCOIN_RPC_USERNAME;
@@ -20,8 +21,25 @@ describe("lib/bitcoin", function () {
       if (err) return done(err);
       assert.equal(100, result.amount);
       assert.equal('USD', result.currency);
-      //console.log(result);
+      assert.equal(true, bitcoin.isAddress(result.address));
+      if (isNaN(parseFloat(result.total)))
+        return done(new Error('got NaN'));
+      paymentAddress = result.address;
       return done();
+    });
+  });
+  it("should fail when passing a stringed amount", function(done) {
+    bitcoin.generatePaymentRequest('a', 'USD', function (err, result) {
+      if (err) return done();
+      else return done(new Error('Payment request generated with incorrect amount parameter'));
+    });
+  });
+
+  it("should get payment information from leveldb", function(done) {
+    bitcoin.getPaymentDetails(paymentAddress, function (err, result) {
+      if (err) return done(err);
+      assert.equal(100, result.amount);
+      done();
     });
   });
 });

@@ -12,7 +12,7 @@ describe("lib/prices", function () {
       prices.getPrice(100, 'USD', function (err, result) {
         if (err) return done(err);
         if (isNaN(parseFloat(result)))
-          return done('Got NaN');
+          return done(new Error('got NaN'));
         return done();
       });
     });
@@ -24,7 +24,7 @@ describe("lib/prices", function () {
       prices.getPrice(100, 'USD', function (err, result) {
         if (err) return done(err);
         if (isNaN(parseFloat(result)))
-          return done('Got NaN');
+          return done(new Error('got NaN'));
         return done();
       });
     });
@@ -36,7 +36,7 @@ describe("lib/prices", function () {
       prices.getPrice(100, 'USD', function (err, result) {
         if (err) return done(err);
         if (isNaN(parseFloat(result)))
-          return done('Got NaN');
+          return done(new Error('got NaN'));
         return done();
       });
     });
@@ -48,7 +48,7 @@ describe("lib/prices", function () {
       prices.getPrice(100, 'USD', function (err, result) {
         if (err) return done(err);
         if (isNaN(parseFloat(result)))
-          return done('Got NaN');
+          return done(new Error('got NaN'));
         return done();
       });
     });
@@ -60,7 +60,7 @@ describe("lib/prices", function () {
       prices.getPrice(100, 'USD', function (err, result) {
         if (err) return done(err);
         if (isNaN(parseFloat(result)))
-          return done('Got NaN');
+          return done(new Error('got NaN'));
         return done();
       });
     });
@@ -72,7 +72,7 @@ describe("lib/prices", function () {
       prices.getPrice(100, 'USD', function (err, result) {
         if (err) return done(err);
         if (isNaN(parseFloat(result)))
-          return done('Got NaN');
+          return done(new Error('got NaN'));
         return done();
       });
     });
