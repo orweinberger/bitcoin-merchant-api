@@ -30,7 +30,7 @@ Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alter
     provider: coinbase
   ```
   
-  Currently supported: coinbase, coindesk and bitpay.
+  Currently supported: coinbase, coindesk, bitpay, bitstamp and btc-e.
   
 
 3. Run `npm install`
