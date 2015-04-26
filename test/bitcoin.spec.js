@@ -1,7 +1,7 @@
-var bitcoin = require('../lib/bitcoin');
-var yaml = require('js-yaml');
-var fs = require('fs');
-var assert = require('assert');
+var bitcoin = require('../lib/bitcoin'),
+  yaml = require('js-yaml'),
+  fs = require('fs'),
+  assert = require('assert')
 var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
 
 describe("lib/bitcoin", function () {
@@ -28,14 +28,14 @@ describe("lib/bitcoin", function () {
       return done();
     });
   });
-  it("should fail when passing a stringed amount", function(done) {
-    bitcoin.generatePaymentRequest('a', 'USD', function (err, result) {
+  it("should fail when passing a stringed amount", function (done) {
+    bitcoin.generatePaymentRequest('a', 'USD', function (err) {
       if (err) return done();
       else return done(new Error('Payment request generated with incorrect amount parameter'));
     });
   });
 
-  it("should get payment information from leveldb", function(done) {
+  it("should get payment information from leveldb", function (done) {
     bitcoin.getPaymentDetails(paymentAddress, function (err, result) {
       if (err) return done(err);
       assert.equal(100, result.amount);

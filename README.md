@@ -43,7 +43,7 @@ Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alter
 
 ###Endpoints
 
-1. **/payment/generate/\<CURRENCY\>/\<AMOUNT\>** - This endpoint will in turn generate a new address, an href and a base64 QR code. Example:
+1. **/payment/generate/\<CURRENCY\>/\<AMOUNT\>** - This endpoint will in turn generate a new address, an href and a base64 QR code. Response example:
 
   ```
   {
@@ -57,7 +57,7 @@ Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alter
   }
   ```
 
-2. **/payment/verify/\<BITCOIN ADDRESS\>** - This endpoint will check and compare the amount received via the requested address. Example:
+2. **/payment/verify/\<BITCOIN ADDRESS\>** - This endpoint will check and compare the amount received via the requested address. Response example:
 
   ```
   {
@@ -65,7 +65,7 @@ Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alter
   }
   ```
 
-3. **/payment/secure/\<BITCOIN ADDRESS\>** - This endpoint will move the received amount (if it matches the original requested amount) to the cold wallet address you've defined in your `default.yml` file. Example:
+3. **/payment/secure/\<BITCOIN ADDRESS\>** - This endpoint will move the received amount (if it matches the original requested amount) to the cold wallet address you've defined in your `default.yml` file. Response example:
 
   ```
   {
@@ -73,7 +73,7 @@ Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alter
   }
   ```
  
-4. **/payment/details/\<BITCOIN ADDRESS\>** - This endpoint will query leveldb to get all relevant information - All information that was generated when you ran the `generate` endpoint including the time the payment was verified and when it was secured. Example:
+4. **/payment/details/\<BITCOIN ADDRESS\>** - This endpoint will query leveldb to get all relevant information - All information that was generated when you ran the `generate` endpoint including the time the payment was verified and when it was secured. Response example:
 
   ```
   {
@@ -97,7 +97,7 @@ See issues for todo list.
 
 MIT
 
-### Buy me a beer
+###BUY ME A BEER
 
 ![12idKQBikRgRuZEbtxXQ4WFYB7Wa3hZzhT](http://i.imgur.com/HHQkm9t.png)
 

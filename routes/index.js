@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var bitcoin = require('../lib/bitcoin');
-var yaml = require('js-yaml');
-var fs = require('fs');
+var express = require('express'),
+  router = express.Router(),
+  bitcoin = require('../lib/bitcoin'),
+  yaml = require('js-yaml'),
+  fs = require('fs');
 var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
 
 /* GET home page. */

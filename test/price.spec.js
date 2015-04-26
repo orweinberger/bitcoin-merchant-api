@@ -1,7 +1,7 @@
-var prices = require('../lib/prices');
-var yaml = require('js-yaml');
-var fs = require('fs');
-var assert = require('assert');
+var prices = require('../lib/prices'),
+  yaml = require('js-yaml'),
+  fs = require('fs'),
+  assert = require('assert');
 var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
 
 
