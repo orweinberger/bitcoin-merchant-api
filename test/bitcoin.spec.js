@@ -6,6 +6,10 @@ var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
 
 describe("lib/bitcoin", function () {
   before(function (done) {
+    if (process.env.BITCOIN_RPC_USERNAME)
+      config.bitcoin.username = process.env.BITCOIN_RPC_USERNAME;
+    if (process.env.BITCOIN_RPC_PASSWORD)
+      config.bitcoin.password = process.env.BITCOIN_RPC_PASSWORD;
     bitcoin.init(config, function (err) {
       if (err) return done(err);
       return done();

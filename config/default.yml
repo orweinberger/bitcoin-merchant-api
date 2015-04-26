@@ -1,0 +1,12 @@
+general:
+  bind: 127.0.0.1
+  port: 3000
+
+bitcoin:
+  host: 192.155.92.133
+  port: 8332
+  username: bitcoinrpc
+  password: 1234567890
+
+pricing:
+  provider: bitpay
