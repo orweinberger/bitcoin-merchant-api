@@ -1,6 +1,7 @@
 general:
   bind: 127.0.0.1
   port: 3000
+  token: change-this
 
 bitcoin:
   host: 192.155.92.133
