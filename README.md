@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/orweinberger/bitcoin-webpos.svg?branch=master)](https://travis-ci.org/orweinberger/bitcoin-webpos)
-[![Coverage Status](https://coveralls.io/repos/orweinberger/bitcoin-webpos/badge.svg)](https://coveralls.io/r/orweinberger/bitcoin-webpos)
+[![Build Status](https://travis-ci.org/orweinberger/bitcoin-merchant-api.svg?branch=master)](https://travis-ci.org/orweinberger/bitcoin-merchant-api)
 
 #Bitcoin web point of sale
 
