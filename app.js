@@ -12,12 +12,7 @@ var app = express();
 var yaml = require('js-yaml');
 var fs = require('fs');
 var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -39,26 +34,19 @@ app.use(function (req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
+    //res.status(err.status || 500);
+    res.status(err.status || 500).end()
   });
 }
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+  res.status(err.status || 500).end()
 });
 
 app.listen(config.general.port, config.general.bind, function () {
-  console.log('Bitcoin web point of sale listening on port ' + config.general.port);
+  console.log('Bitcoin Merchant API listening on port ' + config.general.port);
 });
 
 module.exports = app;

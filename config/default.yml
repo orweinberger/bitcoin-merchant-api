@@ -6,7 +6,7 @@ bitcoin:
   host: 192.155.92.133
   port: 8332
   username: bitcoinrpc
-  password: 1234567890
+  password: HhaZ4YHzBpx8oarpUS1SbtdR3Ywp6kqS5jGnqYrmSV7v
 
 pricing:
   provider: bitpay

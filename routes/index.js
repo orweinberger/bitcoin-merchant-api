@@ -5,11 +5,6 @@ var express = require('express'),
   fs = require('fs');
 var config = yaml.safeLoad(fs.readFileSync('./config/default.yml', 'utf8'));
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', {title: 'Express'});
-});
-
 router.get('/balance', function (req, res) {
   bitcoin.init(config, function (err) {
     if (err) return res.sendStatus(500);
