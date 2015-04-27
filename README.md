@@ -1,14 +1,14 @@
 [![Build Status](https://travis-ci.org/orweinberger/bitcoin-merchant-api.svg?branch=master)](https://travis-ci.org/orweinberger/bitcoin-merchant-api)
 
-#Bitcoin web point of sale
+#Bitcoin merchant API
 
 **This project is experimental, please do not run in production or outside of TESTNET for now**
 
-Bitcoin-webpos is a small node server that allows you to generate payment requests, verify payments and secure received payments to a cold wallet address using an easy RESTful API.
+bitcoin-merchant-api is a small node server that allows you to generate payment requests, verify payments and secure received payments to a cold wallet address using an easy RESTful API.
 
 ###Quick start
 
-Note: Running bitcoin-webpos requires you to Install and run bitcoin-core, alternatively, you can configure it to connect to a remote bitcoin-core server (see step no. 2).
+Note: Running bitcoin-merchant-api requires you to Install and run bitcoin-core, alternatively, you can configure it to connect to a remote bitcoin-core server (see step no. 2).
 
 1. Clone this repository
 2. Create the `config/default.yml` file, it should look like this:
