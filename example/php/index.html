@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Bitcoin merchant API PHP example</title>
+  <style>
+    body {
+      width: 100%;
+    }
+    #container {
+      text-align: center;
+      width: 300px;
+      margin: 0 auto;
+    }
+    #container img {
+      width:300px;
+    }
+  </style>
+</head>
+<body>
+<div id="container"></div>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+  $.get('http://localhost/php/ajax.php?currency=USD&amount=1000', function (data) {
+    var paymentJSON;
+    try {
+      paymentJSON = JSON.parse(data);
+      buildPayment(paymentJSON, 'container');
+    }
+    catch (x) {
+      throw x;
+    }
+  });
+  function buildPayment(data, container) {
+    var html = "<p>Amount due: " + data.currency + data.amount + "</p>";
+    html += "<p><img src='" + data.qr_base64 + "' /></p>";
+    html += "<p>" + data.address + "</p>";
+    $('#' + container).append(html);
+  }
+</script>
+</body>
+</html>
