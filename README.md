@@ -17,6 +17,7 @@ Note: Running bitcoin-merchant-api requires you to Install and run bitcoin-core,
   general:
     bind: 127.0.0.1
     port: 3000
+    token: change-this
   bitcoin:
     host: 127.0.0.1
     port: 18332
