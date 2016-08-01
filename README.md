@@ -99,6 +99,6 @@ MIT
 
 ###BUY ME A BEER
 
-![12idKQBikRgRuZEbtxXQ4WFYB7Wa3hZzhT](http://i.imgur.com/HHQkm9t.png)
+![13K3wqxdRxfimn3xxdAqaDFBD24XVtrcw9](http://i.imgur.com/mwSMNDY.png)
 
-12idKQBikRgRuZEbtxXQ4WFYB7Wa3hZzhT
+13K3wqxdRxfimn3xxdAqaDFBD24XVtrcw9
