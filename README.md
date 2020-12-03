@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/orweinberger/bitcoin-merchant-api.svg?branch=master)](https://travis-ci.org/orweinberger/bitcoin-merchant-api)
 
-#Bitcoin merchant API
+# Bitcoin merchant API
 
 **This project is experimental, please do not run in production or outside of TESTNET for now**
 
 bitcoin-merchant-api is a small node server that allows you to generate payment requests, verify payments and secure received payments to a cold wallet address using an easy RESTful API.
 
-###Quick start
+### Quick start
 
 Note: Running bitcoin-merchant-api requires you to Install and run bitcoin-core, alternatively, you can configure it to connect to a remote bitcoin-core server (see step no. 2).
 
@@ -41,7 +41,7 @@ Note: Running bitcoin-merchant-api requires you to Install and run bitcoin-core,
 3. Run `npm install`
 4. Start the server `npm start`
 
-###Endpoints
+### Endpoints
 
 1. **/payment/generate/\<CURRENCY\>/\<AMOUNT\>** - This endpoint will in turn generate a new address, an href and a base64 QR code. Response example:
 
@@ -89,15 +89,15 @@ Note: Running bitcoin-merchant-api requires you to Install and run bitcoin-core,
   }
   ```
 
-###TODO
+### TODO
 
 See issues for todo list.
 
-###LICENSE
+### LICENSE
 
 MIT
 
-###BUY ME A BEER
+### BUY ME A BEER
 
 ![bc1qj3l9ekln7njune834f9k2d5636hp3mr5jsckex](https://i.imgur.com/kJLAffP.png)
 
